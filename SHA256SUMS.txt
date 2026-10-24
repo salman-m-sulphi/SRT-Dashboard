@@ -2,3 +2,4 @@
 e56788ff2e9a6813e3a5994ded8d6438bea91d0fd4953a8c3b91726a4cc2980d  dashboards/800x480/LMU Nano v1.3.1 - GT Factory 800x480.simhubdash
 f3935b8f79be4e28a437d9db78654fe1676fd0320cda0aa4c08ceaa240608714  dashboards/nightfall/800x268/SRT Nightfall v1.7 - 800x268.simhubdash
 9c0ce85dfa24edfdda5eece29d4dc91408aa1d05aec374f5109efa445cebbc4f  dashboards/nightfall/800x480/SRT Nightfall v1.7 - 800x480.simhubdash
+d4807eaed05da94b34a0fbb2c4264aa4ab1e6555521664277cdb1900d3aba602  dashboards/nightfall/800x480/SRT Nightfall v1.8 - 800x480.simhubdash
