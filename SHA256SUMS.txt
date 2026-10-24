@@ -1,8 +1,3 @@
 51b40250d59870d35fa99276f67563af996518b868e44b32d35df8b58f87e831  dashboards/800x268/LMU Nano v1.3.1 - GT Factory.simhubdash
 e56788ff2e9a6813e3a5994ded8d6438bea91d0fd4953a8c3b91726a4cc2980d  dashboards/800x480/LMU Nano v1.3.1 - GT Factory 800x480.simhubdash
-c7cd8ee4638b18069b40dc56c75365b92e49d3ab95cfc18e948c0cb8a9a14878  screenshots/1-conditions-strategy.png
-9385f3fa8ca3a9020be20ad039c8fca95c64b492478572fe1dbbeeaa153e4e6e  screenshots/2-standings-laps-gaps.png
-29eb4ab089759b1b990dba413579b4df23cd2550a04fec9891ff1523c97398a5  screenshots/3-tyres-fuel.png
-b3dbd08c13b8abdbecb8e694759e943b79536ac36249562adcfdc62c20b7c0ba  screenshots/4-damage-energy-fuel.png
-761eb5879b83712a2ba4ec3185d5c59329624e259fcc97b990bd377ce52c6295  screenshots/5-multiclass-relative.png
-e26ad8e756445ab49fafa2465568e5b0ea508a4ea02f252aaee180b45bd434ce  screenshots/damage-overlay.png
+f3935b8f79be4e28a437d9db78654fe1676fd0320cda0aa4c08ceaa240608714  dashboards/nightfall/800x268/SRT Nightfall v1.7 - 800x268.simhubdash

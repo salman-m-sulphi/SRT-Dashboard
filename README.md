@@ -1,40 +1,31 @@
-# LMU GT Factory Dashboard
+# SRT Dashboard for Le Mans Ultimate
 
-White GT Factory dashboard for Le Mans Ultimate and SimHub, available in **800 × 268** and **800 × 480**.
+Latest: **SRT Nightfall v1.7 â€” 800 Ã— 268**, a flat black and lime SimHub dashboard.
 
-## Features
+[Download v1.7](https://github.com/salman-m-sulphi/SRT-Dashboard/releases/tag/v1.7) or import the `.simhubdash` from `dashboards/nightfall/800x268/`.
 
-- Five pages: conditions/strategy; standings/laps/gaps; tyres/fuel usage; damage/energy/fuel; five-car multiclass relative.
-- Three-lap pace comparison: shows who you are catching ahead and who is catching you from behind, with the average advantage in seconds per lap.
-- Five-second damage overlay on every page, with a car diagram, aero damage and suspension percentages beside each wheel. Further damage restarts the timer.
-- Session time remaining and pit/limiter overlay across all pages.
+- Six pages: driving; conditions/strategy; standings/laps/gaps; tyres/fuel usage; damage/energy/fuel; five-car multiclass relative.
+- Minimal waiting screen with a centered heavy-bold live PC clock and date.
+- Proportional car diagrams, primary tyre percentages, secondary temperature/pressure and compact FIN/LRN status labels.
+- Three-lap catching/catching-us comparison and five-second damage alerts, plus session timers and pit/limiter overlays.
 
-## Setup
+Import the attached .simhubdash into SimHub. Enable LMU support and install the NeoRed LMU plugin for suspension/aero damage. Optional companion integration remains supported but is not bundled; some fields may show N/A without its data. Previous dashboard versions remain separate.
 
-1. Install SimHub and enable its Le Mans Ultimate support.
-2. Import the `.simhubdash` from the matching resolution folder under `dashboards/`.
-3. Install and enable the NeoRed LMU plugin for suspension/aero damage telemetry. The plugin is not bundled here.
-4. Start LMU and enter the car. Configure page navigation through SimHub controls.
+Validated with the native SimHub loader and live clock/date formulas; layout, tyre formatting, pace history and damage timing regression checks pass. Live driving verification remains recommended. Race Control warning mirroring is not included in this version.
 
-This repository distributes SimHub dashboards only. No bridge EXE or Pico firmware is included. The dashboards use native SimHub and NeoRed plugin data when companion data is unavailable. Some telemetry and Pico-specific selections may display N/A. Optional companion integration remains supported by the formulas if separately configured.
+Dashboard only: no bridge EXE or Pico firmware.
 
-The pace comparison needs three newly observed completed laps after startup/session reset. Pit-contaminated or missed-lap sequences reset the average. Keep the dashboard running to collect lap history.
+## Preview
 
-## Screenshots
+Sample telemetry is used in the page previews. The waiting preview is a static capture; the imported clock and date update automatically using the PC's local time.
 
-Screenshots use sample data, not live driving telemetry.
+![All six pages and damage overlay](screenshots/nightfall-v1.7/all-screens.png)
+![Minimal waiting screen](screenshots/nightfall-v1.7/waiting.png)
 
-![Conditions and strategy](screenshots/1-conditions-strategy.png)
-![Standings, laps and gaps](screenshots/2-standings-laps-gaps.png)
-![Tyres and fuel](screenshots/3-tyres-fuel.png)
-![Damage, energy and fuel](screenshots/4-damage-energy-fuel.png)
-![Multiclass relative](screenshots/5-multiclass-relative.png)
-![Five-second damage overlay](screenshots/damage-overlay.png)
+## Earlier versions
+
+The white GT Factory v1.3.1 dashboards remain available in `dashboards/800x268/`, `dashboards/800x480/` and earlier releases. Nightfall v1.7 is currently supplied only at 800 Ã— 268.
 
 ## Distribution
 
-Release files only. Build folders, logs and development source files are excluded. All rights reserved; no open-source licence is granted by this repository. The SimHub dashboard import packages contain editable dashboard definitions and formulas.
-
-## Versioned releases
-
-Download the matching dashboard from [Releases](https://github.com/salman-m-sulphi/SRT-Dashboard/releases). Each update gets a version tag, download packages and release notes. Earlier releases stay available. Update VERSION and RELEASE_NOTES.md with each dashboard update.
+SimHub dashboard files only. No bridge EXE or firmware is included. All rights reserved; no open-source licence is granted. Import packages contain editable dashboard definitions and formulas.

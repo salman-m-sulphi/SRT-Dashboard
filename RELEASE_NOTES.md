@@ -1,12 +1,14 @@
-# SRT Dashboard v1.3.1
+# SRT Nightfall v1.7
 
-White GT Factory LMU dashboards for SimHub in 800x268 and 800x480.
+Flat black and lime SimHub dashboard for Le Mans Ultimate, 800 Ã— 268.
 
-- Five pages: conditions/strategy, standings/laps/gaps, tyres/fuel, damage/energy/fuel, multiclass relative.
-- Three-lap catching indicators for drivers ahead and behind.
-- Five-second car damage overlay on every page, with aero and suspension percentages.
-- Session countdown and pit/limiter overlay on every page.
+- Six pages: driving; conditions/strategy; standings/laps/gaps; tyres/fuel usage; damage/energy/fuel; five-car multiclass relative.
+- Minimal waiting screen with a centered heavy-bold live PC clock and date.
+- Proportional car diagrams, primary tyre percentages, secondary temperature/pressure and compact FIN/LRN status labels.
+- Three-lap catching/catching-us comparison and five-second damage alerts, plus session timers and pit/limiter overlays.
 
-Import the package matching your display into SimHub. NeoRed LMU plugin supplies suspension and aero damage. Pace comparison needs three newly observed completed laps; unavailable telemetry shows N/A.
+Import the attached .simhubdash into SimHub. Enable LMU support and install the NeoRed LMU plugin for suspension/aero damage. Optional companion integration remains supported but is not bundled; some fields may show N/A without its data. Previous dashboard versions remain separate.
 
-Dashboard packages only. No bridge EXE or firmware included.
+Validated with the native SimHub loader and live clock/date formulas; layout, tyre formatting, pace history and damage timing regression checks pass. Live driving verification remains recommended. Race Control warning mirroring is not included in this version.
+
+Dashboard only: no bridge EXE or Pico firmware.
