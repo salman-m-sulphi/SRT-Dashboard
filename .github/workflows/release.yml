@@ -1,0 +1,35 @@
+name: Publish dashboard release
+on:
+  push:
+    branches: [main]
+    paths: [VERSION]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dashboard-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify downloads
+        run: |
+          sha256sum --check SHA256SUMS.txt
+          test "$(find dashboards -type f -name '*.simhubdash' | wc -l)" -eq 2
+          if find dashboards -type f \( -name '*.exe' -o -name '*.uf2' \) | grep -q .; then exit 1; fi
+      - name: Publish versioned release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          version="$(tr -d '\r\n' < VERSION)"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          tag="v$version"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "Release already exists. Bump VERSION for the next update."
+            exit 0
+          fi
+          mapfile -d '' assets < <(find dashboards -type f -name '*.simhubdash' -print0)
+          gh release create "$tag" "${assets[@]}" SHA256SUMS.txt --target "$GITHUB_SHA" --title "SRT Dashboard $tag" --notes-file RELEASE_NOTES.md
