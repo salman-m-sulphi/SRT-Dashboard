@@ -2,7 +2,7 @@ name: Publish dashboard release
 on:
   push:
     branches: [main]
-    paths: [VERSION]
+    paths: ['VERSION', 'dashboards/**', 'SHA256SUMS.txt', 'RELEASE_NOTES.md']
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,10 +27,11 @@ jobs:
           version="$(tr -d '\r\n' < VERSION)"
           [[ "$version" =~ ^[0-9]+\.[0-9]+(\.[0-9]+)?$ ]]
           tag="v$version"
-          if gh release view "$tag" >/dev/null 2>&1; then
-            echo "Release already exists. Bump VERSION for the next update."
-            exit 0
-          fi
           mapfile -d '' assets < <(find dashboards -type f -name "*v$version - *.simhubdash" -print0)
           test "${#assets[@]}" -gt 0
-          gh release create "$tag" "${assets[@]}" SHA256SUMS.txt --target "$GITHUB_SHA" --title "SRT Dashboard $tag" --notes-file RELEASE_NOTES.md
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" SHA256SUMS.txt --clobber
+            gh release edit "$tag" --notes-file RELEASE_NOTES.md
+          else
+            gh release create "$tag" "${assets[@]}" SHA256SUMS.txt --target "$GITHUB_SHA" --title "SRT Dashboard $tag" --notes-file RELEASE_NOTES.md
+          fi
