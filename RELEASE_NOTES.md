@@ -1,16 +1,14 @@
-# SRT Nightfall v1.8 — 800 × 480
+# SRT Nightfall v1.8 — both display sizes
 
-Four-page dashboard matching the approved layout, in this order:
+Choose the import matching your display:
 
-1. Driving: one tyre/damage diagram, large tyre percentages, suspension damage beside each wheel and overall aero damage in the centre. Track conditions replace the catching messages along the bottom.
-2. Standings / Laps / Gaps: leader, ahead, player and behind, personal-best delta and three-lap catching indicators.
-3. Strategy / Fuel / Energy: large resource ranges and amounts at the top, fuel usage at bottom left and race strategy at bottom right.
-4. Multiclass Relative: five rows across all classes.
+- **800 × 480:** `SRT Nightfall v1.8 - 800x480.simhubdash` — four approved pages: Driving; Standings/Laps/Gaps; Strategy/Fuel/Energy; Multiclass Relative.
+- **800 × 268 / 2.99-inch Nano:** `SRT Nightfall Nano v1.8 - 800x268.simhubdash` — seven focused pages for readability: Driving; Standings/Laps/Gaps; Range/Energy/Fuel; Race Strategy; Fuel Usage; Tyres/Damage Detail; Multiclass Relative.
 
-Session time and 1–4 page counters remain. Five-second damage alerts, pit/limiter overlays and the minimal live local clock/date waiting screen work across all four pages. Canvas is correctly set to 800 × 480.
+Both versions include combined tyre/suspension/overall aero information, track conditions on the driving page, session countdown, page counters, five-second damage alerts, pit/limiter overlays and a minimal live local clock/date waiting screen. Catching messages are retained on the standings page and removed from driving.
 
-Import the attached .simhubdash into SimHub, then select SRT Nightfall v1.8 - 800x480. Enable LMU support. NeoRed LMU plugin is required for suspension/overall aero damage. Optional companion data is supported but not bundled; some fields may show N/A without it. Overall aero damage does not identify separate bent wings. Race Control message mirroring is not included.
+The Nano separates dense resource/strategy/usage sections and provides a dedicated tyre/damage detail page with larger readings. The larger version combines strategy, fuel and energy on one page. Both use their correct native canvas sizes. The existing larger v1.8 download is unchanged by this addition.
 
-Validated: native SimHub loader, packaged canvas dimensions, page order/counters, shared overlays, bounds, normal/pit/damage/waiting and FIN/LRN/N/A sample renders, pace/damage regression checks. Calculations are unchanged; live driving verification is still required. Screenshots use sample data.
+Import the chosen .simhubdash into SimHub and select it. Enable LMU support. NeoRed LMU plugin is required for suspension/overall aero damage. Optional companion data remains supported but no bridge or firmware is bundled; unavailable telemetry may show N/A. Overall aero damage does not distinguish individual bent wings. Race Control message mirroring is not included.
 
-v1.8 is for 800 × 480. The 800 × 268 Nano remains at v1.7 in earlier downloads. No bridge EXE or firmware is included.
+Validated: native SimHub loading, package integrity, dimensions, page counts/order/counters, shared overlays, bounds, sample-render text overflow and pace/damage regression tests. Calculations are unchanged. Screenshots use sample data; live driving and actual small-screen readability still require user verification.
