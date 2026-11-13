@@ -16,6 +16,10 @@ Import the chosen .simhubdash into SimHub and select it. Enable LMU support. Neo
 
 Validated: native SimHub loading, package integrity, dimensions, page counts/order/counters, shared overlays, bounds, sample-render text overflow and pace/damage regression tests. Calculations are unchanged. Screenshots use sample data; live driving and actual small-screen readability still require user verification.
 
+## Widescreen — 1280 × 720 (16:9)
+
+![Widescreen driving page](screenshots/nightfall-v1.8/widescreen-driving.jpg)
+
 ## Larger screen — 800 × 480
 
 ![Four-page larger dashboard](screenshots/nightfall-v1.8/all-pages.png)
